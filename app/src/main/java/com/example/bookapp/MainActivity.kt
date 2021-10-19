@@ -21,8 +21,8 @@ class MainActivity : AppCompatActivity() {
         val adapter = ViewPagerAdapter(supportFragmentManager)
         val viewPager:ViewPager=findViewById(R.id.viewPager)
         val tabLayout: TabLayout =findViewById(R.id.tabs)
-        adapter.addFragment(LoginFragment(),"logIn")
-        adapter.addFragment(SignUpFragment(),"signUp")
+        adapter.addFragment(LoginFragment(),"Sign In")
+        adapter.addFragment(SignUpFragment(),"sign Up")
         viewPager.adapter = adapter
         tabLayout.setupWithViewPager(viewPager)
         //tabLayout.getTabAt(0)!!.setIcon()
