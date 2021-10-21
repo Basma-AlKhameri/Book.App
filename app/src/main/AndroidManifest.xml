@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BookApp">
         <activity
-            android:name=".teeest"
+            android:name=".Home_Page"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
