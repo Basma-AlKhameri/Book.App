@@ -25,7 +25,6 @@ class MainActivity : AppCompatActivity() {
         adapter.addFragment(SignUpFragment(),"sign Up")
         viewPager.adapter = adapter
         tabLayout.setupWithViewPager(viewPager)
-        //tabLayout.getTabAt(0)!!.setIcon()
 
 
     }

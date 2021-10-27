@@ -2,40 +2,44 @@ package com.example.bookapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.bookapp.DataClass.images
 import com.example.bookapp.adapters.Category_recyclerview_adapter
+import com.example.bookapp.fragment.*
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class Home_Page : AppCompatActivity() {
 
-    private lateinit var recyclerview: RecyclerView
-    lateinit var list_image:ArrayList<images>
-    lateinit var imageId: Array<Int>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_page)
 
-        imageId= arrayOf(R.drawable.art_category,R.drawable.biography_category
-            ,R.drawable.business_category,R.drawable.history_category,R.drawable.science_category,
-            R.drawable.travel_category )
+         val homeFragment = Home_icon_fragment()
+        val favotiteFragment=favorite_icon_fragment()
+        val profileFragment= profile_icon_fragment()
+        val searchFragment= search_icon_fragment()
+        val cartFragment= cart_icon_fragment()
 
-        recyclerview=findViewById(R.id.recyclerview)
-        recyclerview.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        recyclerview.setHasFixedSize(true)
+        setCurrentFragment(homeFragment)
 
-        list_image  = arrayListOf<images>()
-        getImages()
-    }
+        BottomNavigationView.OnNavigationItemSelectedListener {
+            when(it.itemId) {
+                R.id.ihome -> setCurrentFragment(homeFragment)
+                R.id.ifavorite -> setCurrentFragment(favotiteFragment)
+                R.id.iprofile -> setCurrentFragment(profileFragment)
 
-    private fun getImages() {
-        for(i in imageId.indices){
-            val ic=images(imageId[i])
-            list_image.add(ic)
+                R.id.isearch-> setCurrentFragment(searchFragment)
+                R.id.icart-> setCurrentFragment(cartFragment)
+            }
+            true
         }
-        recyclerview.adapter= Category_recyclerview_adapter(list_image)
 
     }
-
+private fun setCurrentFragment(fragment: Fragment)= supportFragmentManager.beginTransaction()
+    .apply { replace(R.id.flFragment, fragment)
+        commit()
+    }
 }
