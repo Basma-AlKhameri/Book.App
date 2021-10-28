@@ -3,6 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Manal/StudioProjects/BookStore/app/src/main/res/drawable-anydpi/Home_fotter.xml" value="0.2985" />
+        <entry key="..\:/Users/Manal/StudioProjects/BookStore/app/src/main/res/drawable-anydpi/ic_cart.xml" value="0.2985" />
+        <entry key="..\:/Users/Manal/StudioProjects/BookStore/app/src/main/res/drawable/button_nav_veiw1.xml" value="0.2985" />
+        <entry key="..\:/Users/Manal/StudioProjects/BookStore/app/src/main/res/layout/activity_home_page.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Manal/StudioProjects/BookStore/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Manal/StudioProjects/BookStore/app/src/main/res/layout/cart_icon_fragment.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Manal/StudioProjects/BookStore/app/src/main/res/layout/category_card.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Manal/StudioProjects/BookStore/app/src/main/res/layout/home_icon_fragment.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Manal/StudioProjects/BookStore/app/src/main/res/menu/buttom_nav_menu1.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Manal/StudioProjects/BookStore/app/src/main/res/menu/buttom_nav_menu2.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/TOSHIBA/AndroidStudioProjects/BookApp-/app/src/main/res/layout/activity_main.xml" value="0.18206521739130435" />
         <entry key="..\:/Users/TOSHIBA/AndroidStudioProjects/BookApp-/app/src/main/res/layout/login_tab_fragment.xml" value="0.16" />
         <entry key="..\:/Users/TOSHIBA/AndroidStudioProjects/BookApp2/app/src/main/res/drawable/button_bg.xml" value="0.259765625" />
@@ -15,21 +25,11 @@
         <entry key="..\:/Users/TOSHIBA/AndroidStudioProjects/BookStore/app/src/main/res/drawable-anydpi/ic_search.xml" value="0.2203125" />
         <entry key="..\:/Users/TOSHIBA/AndroidStudioProjects/BookStore/app/src/main/res/drawable/button_bg.xml" value="0.19907407407407407" />
         <entry key="..\:/Users/TOSHIBA/AndroidStudioProjects/BookStore/app/src/main/res/drawable/button_nav_veiw1.xml" value="0.2203125" />
-        <entry key="..\:/Users/TOSHIBA/AndroidStudioProjects/BookStore/app/src/main/res/layout/activity_cart_fragment.xml" value="0.16485507246376813" />
-        <entry key="..\:/Users/TOSHIBA/AndroidStudioProjects/BookStore/app/src/main/res/layout/activity_home_fragment.xml" value="0.14673913043478262" />
-        <entry key="..\:/Users/TOSHIBA/AndroidStudioProjects/BookStore/app/src/main/res/layout/activity_home_page.xml" value="0.18" />
+        <entry key="..\:/Users/TOSHIBA/AndroidStudioProjects/BookStore/app/src/main/res/layout/activity_home_page.xml" value="0.25" />
         <entry key="..\:/Users/TOSHIBA/AndroidStudioProjects/BookStore/app/src/main/res/layout/activity_main.xml" value="0.12681159420289856" />
-        <entry key="..\:/Users/TOSHIBA/AndroidStudioProjects/BookStore/app/src/main/res/layout/activity_search_fragment.xml" value="0.16485507246376813" />
-        <entry key="..\:/Users/TOSHIBA/AndroidStudioProjects/BookStore/app/src/main/res/layout/cart_icon_fragment.xml" value="0.18115942028985507" />
         <entry key="..\:/Users/TOSHIBA/AndroidStudioProjects/BookStore/app/src/main/res/layout/category_card.xml" value="0.17481884057971014" />
-        <entry key="..\:/Users/TOSHIBA/AndroidStudioProjects/BookStore/app/src/main/res/layout/fragment_favorite_icon_gtagment.xml" value="0.18115942028985507" />
-        <entry key="..\:/Users/TOSHIBA/AndroidStudioProjects/BookStore/app/src/main/res/layout/fragment_home.xml" value="0.14673913043478262" />
-        <entry key="..\:/Users/TOSHIBA/AndroidStudioProjects/BookStore/app/src/main/res/layout/home_icon_fragment.xml" value="0.18115942028985507" />
         <entry key="..\:/Users/TOSHIBA/AndroidStudioProjects/BookStore/app/src/main/res/layout/login_tab_fragment.xml" value="0.15" />
-        <entry key="..\:/Users/TOSHIBA/AndroidStudioProjects/BookStore/app/src/main/res/layout/profile_icon_fragment.xml" value="0.18115942028985507" />
-        <entry key="..\:/Users/TOSHIBA/AndroidStudioProjects/BookStore/app/src/main/res/layout/search_icon_fragment.xml" value="0.18115942028985507" />
         <entry key="..\:/Users/TOSHIBA/AndroidStudioProjects/BookStore/app/src/main/res/menu/buttom_nav_menu1.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/TOSHIBA/AndroidStudioProjects/BookStore/app/src/main/res/menu/buttom_nav_menu2.xml" value="0.2" />
         <entry key="..\:/Users/alnad/AndroidStudioProjects/BookApp-/app/src/main/res/drawable/splash_screen.xml" value="0.2755208333333333" />
         <entry key="..\:/Users/alnad/AndroidStudioProjects/BookApp-/app/src/main/res/layout/activity_main.xml" value="0.259375" />
         <entry key="..\:/Users/alnad/AndroidStudioProjects/BookApp-/app/src/main/res/layout/fragment_login.xml" value="0.2453125" />
@@ -40,7 +40,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
