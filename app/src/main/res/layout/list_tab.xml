@@ -6,10 +6,10 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/explor_tap"
+        android:id="@+id/list_heading"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Explore"
+        android:text=" "
         android:textColor="@color/black"
         android:textSize="16dp"
         android:textStyle="bold"

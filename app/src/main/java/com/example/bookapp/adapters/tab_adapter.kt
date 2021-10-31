@@ -6,21 +6,22 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.bookapp.DataClass.dataClass_tab
+import com.example.bookapp.DataClass.heading
+//import com.example.bookapp.DataClass.dataClass_tab
 import com.example.bookapp.R
 import com.google.android.material.imageview.ShapeableImageView
 
-class tab_adapter (private val THeading: ArrayList<dataClass_tab>):
+class tab_adapter (private val THeading: ArrayList<heading>):
     RecyclerView.Adapter<tab_adapter.myViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): myViewHolder {
         val itemView=
-            LayoutInflater.from(parent.context).inflate(R.layout.category_card, parent,false)
+            LayoutInflater.from(parent.context).inflate(R.layout.list_tab, parent,false)
         return myViewHolder(itemView)
     }
 
     override fun onBindViewHolder(holder: myViewHolder, position: Int) {
         val curruntItem= THeading[position]
-        holder.tab.text = curruntItem.Heading
+        holder.tab.text = curruntItem.heading
 
     }
 
@@ -30,6 +31,6 @@ class tab_adapter (private val THeading: ArrayList<dataClass_tab>):
 
     class myViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
 
-        val tab: TextView =itemView.findViewById(R.id.explor_tap)
+        val tab: TextView =itemView.findViewById(R.id.list_heading)
     }
 }
