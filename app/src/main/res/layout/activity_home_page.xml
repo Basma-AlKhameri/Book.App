@@ -28,7 +28,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bottomAppBar" />
+        app:layout_constraintTop_toBottomOf="@+id/bottomAppBar" >
+
+
+    </FrameLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView2"
@@ -39,4 +42,5 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/buttom_nav_menu2"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
