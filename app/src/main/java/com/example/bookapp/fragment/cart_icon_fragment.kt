@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.bookapp.R
 
-class cart_icon_fragment : Fragment() {
+class cart_icon_fragment : Fragment(R.layout.cart_icon_fragment) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

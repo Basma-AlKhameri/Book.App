@@ -11,7 +11,7 @@ import com.example.bookapp.DataClass.images
 import com.example.bookapp.R
 import com.example.bookapp.adapters.Category_recyclerview_adapter
 
-class Home_icon_fragment : Fragment() {
+class Home_icon_fragment : Fragment(R.layout.home_icon_fragment) {
     private lateinit var recyclerview: RecyclerView
     lateinit var list_image: ArrayList<images>
     lateinit var imageId: Array<Int>

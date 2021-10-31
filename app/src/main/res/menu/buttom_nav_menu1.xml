@@ -5,6 +5,6 @@
         android:icon="@drawable/ic_search"
         />
     <item
-        android:id="@+id/icart"
+       android:id="@+id/icart"
         android:icon="@drawable/ic_cart"/>
 </menu>

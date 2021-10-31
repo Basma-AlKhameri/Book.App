@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.example.bookapp.R
 
 
-class favorite_icon_fragment : Fragment() {
+class favorite_icon_fragment : Fragment(R.layout.favorite_icon_fragment) {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
