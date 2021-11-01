@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.bookapp.DataClass.heading
-//import com.example.bookapp.DataClass.dataClass_tab
 import com.example.bookapp.R
 import com.google.android.material.imageview.ShapeableImageView
 
