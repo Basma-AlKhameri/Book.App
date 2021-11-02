@@ -5,21 +5,27 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.bookapp.DataClass.heading
+import com.example.bookapp.DataClass.book_image
 import com.example.bookapp.DataClass.images
 import com.example.bookapp.R
 import com.example.bookapp.adapters.Category_recyclerview_adapter
-import com.example.bookapp.adapters.tab_adapter
+import com.example.bookapp.adapters.image_adapter
+
 
 class Home_icon_fragment : Fragment(R.layout.home_icon_fragment) {
+
+    //category recyclerview
     private lateinit var recyclerview: RecyclerView
-    private lateinit var recyclerviewTab: RecyclerView
-    lateinit var list_image: ArrayList<images>
-    lateinit var list_Tab: ArrayList<heading>
-    lateinit var imageId: Array<Int>
-    lateinit var headingId : Array<String>
+    lateinit var c_list_image: ArrayList<images>
+    lateinit var c_imageId: Array<Int>
+
+   // image recyclerview
+   private lateinit var recyclerviewimage: RecyclerView
+    lateinit var b_list_image: ArrayList<book_image>
+    lateinit var b_imageId: Array<Int>
 
 
     override fun onCreateView(
@@ -33,7 +39,7 @@ class Home_icon_fragment : Fragment(R.layout.home_icon_fragment) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        imageId = arrayOf(
+        c_imageId = arrayOf(
             R.drawable.art_category,
             R.drawable.biography_category,
             R.drawable.business_category,
@@ -42,47 +48,51 @@ class Home_icon_fragment : Fragment(R.layout.home_icon_fragment) {
             R.drawable.travel_category
         )
 
-        headingId = arrayOf(
-            "Explore",
-            "Best Seller",
-            "Newest"
-        )
-        recyclerview= view.findViewById(R.id.recyclerview)
-        recyclerviewTab=view.findViewById(R.id.recyclerviewTab)
+        recyclerview = view.findViewById(R.id.recyclerview)
 
         recyclerview.layoutManager =
             LinearLayoutManager(this.context, LinearLayoutManager.HORIZONTAL, false)
         recyclerview.setHasFixedSize(true)
 
-        recyclerviewTab.layoutManager =
-            LinearLayoutManager(this.context, LinearLayoutManager.HORIZONTAL, false)
-        recyclerviewTab.setHasFixedSize(true)
-
-
-        list_image = arrayListOf<images>()
+        c_list_image = arrayListOf<images>()
         getImages()
 
-        list_Tab = arrayListOf<heading>()
-        getTab()
+    }//اذا بتشيلين الكومنت من الكود احذفي هذا القوس
+
+      /*  // image recyclerview
+        b_imageId= arrayOf(
+            R.drawable.test)
+
+        b_list_image= arrayListOf<book_image>()
+        getBookImages()
+
+        recyclerviewimage=view.findViewById(R.id.recyclerView_image)
+
+        recyclerviewimage.layoutManager= GridLayoutManager(this.context,
+            2)
+        recyclerviewimage.setHasFixedSize(true)
+
     }
 
-    private fun getTab() {
-        for(i in headingId.indices){
-            val tab= heading(headingId[i])
-            list_Tab.add(tab)
-        }
-        recyclerviewTab.adapter= tab_adapter(list_Tab)
-
+private fun getBookImages() {
+    for(i in b_imageId.indices){
+        val bppkimg= book_image(b_imageId[i])
+        b_list_image.add(bppkimg)
     }
+    recyclerviewimage.adapter= image_adapter(b_list_image)
+}*/
+
+
 
     private fun getImages() {
-        for(i in imageId.indices){
-            val ic= images(imageId[i])
-            list_image.add(ic)
+        for(i in c_imageId.indices){
+            val ic= images(c_imageId[i])
+           c_list_image.add(ic)
         }
-        recyclerview.adapter= Category_recyclerview_adapter(list_image)
-
+        recyclerview.adapter= Category_recyclerview_adapter(c_list_image)
     }
+
+
 }
 
 

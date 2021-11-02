@@ -3,14 +3,8 @@ package com.example.bookapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.bookapp.DataClass.images
-import com.example.bookapp.adapters.Category_recyclerview_adapter
-import com.example.bookapp.adapters.tab_adapter
 import com.example.bookapp.fragment.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.bottomnavigation.BottomNavigationView.OnNavigationItemSelectedListener
 
 class Home_Page : AppCompatActivity() {
 
@@ -29,6 +23,7 @@ val bottomNavigationView2= findViewById<BottomNavigationView>(R.id.bottomNavigat
         val cartFragment= cart_icon_fragment()
 
         setCurrentFragment(homeFragment)
+
         bottomNavigationView1.setOnNavigationItemSelectedListener {
             when(it.itemId) {
                 R.id.isearch-> setCurrentFragment(searchFragment)
@@ -43,8 +38,6 @@ val bottomNavigationView2= findViewById<BottomNavigationView>(R.id.bottomNavigat
                 R.id.ifavorite -> setCurrentFragment(favotiteFragment)
                 R.id.iprofile -> setCurrentFragment(profileFragment)
 
-               // R.id.isearch-> setCurrentFragment(searchFragment)
-               // R.id.icart-> setCurrentFragment(cartFragment)
             }
             true
         }
