@@ -59,7 +59,7 @@ class Home_icon_fragment : Fragment(R.layout.home_icon_fragment) {
 
 
        // image recyclerview
-      /*  b_imageId= arrayOf(
+       b_imageId= arrayOf(
             R.drawable.test)
 
         recyclerviewimage=view.findViewById(R.id.recyclerView_image)
@@ -68,7 +68,7 @@ class Home_icon_fragment : Fragment(R.layout.home_icon_fragment) {
             2)
 
         b_list_image= arrayListOf<book_image>()
-        getBookImages() */
+        getBookImages()
         
     }
 
