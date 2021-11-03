@@ -6,7 +6,7 @@
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.profile_icon_fragment">
+    tools:context=".fragment.Profile_icon_fragment">
 
     <TextView
         android:layout_width="wrap_content"

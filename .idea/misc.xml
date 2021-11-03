@@ -6,13 +6,11 @@
         <entry key="..\:/Users/Manal/StudioProjects/BookStore/app/src/main/res/drawable-anydpi/Home_fotter.xml" value="0.2985" />
         <entry key="..\:/Users/Manal/StudioProjects/BookStore/app/src/main/res/drawable-anydpi/ic_cart.xml" value="0.2985" />
         <entry key="..\:/Users/Manal/StudioProjects/BookStore/app/src/main/res/drawable/button_nav_veiw1.xml" value="0.2985" />
-        <entry key="..\:/Users/Manal/StudioProjects/BookStore/app/src/main/res/drawable/veiw_bg.xml" value="0.2985" />
         <entry key="..\:/Users/Manal/StudioProjects/BookStore/app/src/main/res/layout/activity_home_page.xml" value="0.358695652173913" />
         <entry key="..\:/Users/Manal/StudioProjects/BookStore/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
         <entry key="..\:/Users/Manal/StudioProjects/BookStore/app/src/main/res/layout/cart_icon_fragment.xml" value="0.358695652173913" />
         <entry key="..\:/Users/Manal/StudioProjects/BookStore/app/src/main/res/layout/category_card.xml" value="0.358695652173913" />
         <entry key="..\:/Users/Manal/StudioProjects/BookStore/app/src/main/res/layout/home_icon_fragment.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/Manal/StudioProjects/BookStore/app/src/main/res/layout/image_item.xml" value="0.358695652173913" />
         <entry key="..\:/Users/Manal/StudioProjects/BookStore/app/src/main/res/layout/list_tab.xml" value="0.358695652173913" />
         <entry key="..\:/Users/Manal/StudioProjects/BookStore/app/src/main/res/menu/buttom_nav_menu1.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Manal/StudioProjects/BookStore/app/src/main/res/menu/buttom_nav_menu2.xml" value="0.36666666666666664" />
@@ -30,6 +28,7 @@
         <entry key="..\:/Users/TOSHIBA/AndroidStudioProjects/BookStore/app/src/main/res/drawable/button_nav_veiw1.xml" value="0.2203125" />
         <entry key="..\:/Users/TOSHIBA/AndroidStudioProjects/BookStore/app/src/main/res/drawable/edit_text_bg.xml" value="0.2169230769230769" />
         <entry key="..\:/Users/TOSHIBA/AndroidStudioProjects/BookStore/app/src/main/res/drawable/image_list.xml" value="0.2169230769230769" />
+        <entry key="..\:/Users/TOSHIBA/AndroidStudioProjects/BookStore/app/src/main/res/drawable/veiw_bg.xml" value="0.20277777777777778" />
         <entry key="..\:/Users/TOSHIBA/AndroidStudioProjects/BookStore/app/src/main/res/layout/activity_home_page.xml" value="0.22" />
         <entry key="..\:/Users/TOSHIBA/AndroidStudioProjects/BookStore/app/src/main/res/layout/activity_main.xml" value="0.12681159420289856" />
         <entry key="..\:/Users/TOSHIBA/AndroidStudioProjects/BookStore/app/src/main/res/layout/category_card.xml" value="0.17481884057971014" />

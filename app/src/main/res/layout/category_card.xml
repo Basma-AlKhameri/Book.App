@@ -3,10 +3,11 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:padding="8dp">
+
     <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageCard"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:id="@+id/imageCard"
-        android:src="@drawable/art_category"/>
+        android:src="@drawable/art_category" />
 
 </RelativeLayout>

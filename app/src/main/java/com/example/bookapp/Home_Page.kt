@@ -17,10 +17,10 @@ val bottomNavigationView2= findViewById<BottomNavigationView>(R.id.bottomNavigat
         val bottomNavigationView1= findViewById<BottomNavigationView>(R.id.bottomNavigationView1)
 
         val homeFragment = Home_icon_fragment()
-        val favotiteFragment=favorite_icon_fragment()
-        val profileFragment= profile_icon_fragment()
-        val searchFragment= search_icon_fragment()
-        val cartFragment= cart_icon_fragment()
+        val favotiteFragment=Favorite_icon_fragment()
+        val profileFragment= Profile_icon_fragment()
+        val searchFragment= Search_icon_fragment()
+        val cartFragment= Cart_icon_fragment()
 
         setCurrentFragment(homeFragment)
 

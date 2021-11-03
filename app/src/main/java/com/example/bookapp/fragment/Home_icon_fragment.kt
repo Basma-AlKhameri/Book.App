@@ -12,7 +12,7 @@ import com.example.bookapp.DataClass.book_image
 import com.example.bookapp.DataClass.images
 import com.example.bookapp.R
 import com.example.bookapp.adapters.Category_recyclerview_adapter
-import com.example.bookapp.adapters.image_adapter
+import com.example.bookapp.adapters.Image_adapter
 
 
 class Home_icon_fragment : Fragment(R.layout.home_icon_fragment) {
@@ -22,7 +22,7 @@ class Home_icon_fragment : Fragment(R.layout.home_icon_fragment) {
     lateinit var c_list_image: ArrayList<images>
     lateinit var c_imageId: Array<Int>
 
-   // image recyclerview
+   // Book recyclerview
    private lateinit var recyclerviewimage: RecyclerView
     lateinit var b_list_image: ArrayList<book_image>
     lateinit var b_imageId: Array<Int>
@@ -39,17 +39,17 @@ class Home_icon_fragment : Fragment(R.layout.home_icon_fragment) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //category recyclerview
         c_imageId = arrayOf(
-            R.drawable.science_category,
-            R.drawable.travel_category,
+            R.drawable.art_category,
             R.drawable.biography_category,
             R.drawable.history_category,
-            R.drawable.art_category,
-            R.drawable.business_category
+            R.drawable.travel_category,
+            R.drawable.science_category,
+            R.drawable.business_category,
         )
 
         recyclerview = view.findViewById(R.id.recyclerview)
-
         recyclerview.layoutManager =
             LinearLayoutManager(this.context, LinearLayoutManager.HORIZONTAL, false)
         recyclerview.setHasFixedSize(true)
@@ -57,31 +57,27 @@ class Home_icon_fragment : Fragment(R.layout.home_icon_fragment) {
         c_list_image = arrayListOf<images>()
         getImages()
 
-        b_imageId= arrayOf(
-                    R.drawable.science_category,
-            R.drawable.travel_category,
-            R.drawable.biography_category,
-            R.drawable.history_category,
-            R.drawable.art_category,
-            R.drawable.business_category)
 
-        b_list_image= arrayListOf<book_image>()
-        getBookImages()
+       // image recyclerview
+      /*  b_imageId= arrayOf(
+            R.drawable.test)
 
         recyclerviewimage=view.findViewById(R.id.recyclerView_image)
 
         recyclerviewimage.layoutManager= GridLayoutManager(this.context,
             2)
-        recyclerviewimage.setHasFixedSize(true)
 
+        b_list_image= arrayListOf<book_image>()
+        getBookImages() */
+        
     }
 
 private fun getBookImages() {
     for(i in b_imageId.indices){
-        val bppkimg= book_image(b_imageId[i])
-        b_list_image.add(bppkimg)
+        val bImg= book_image(b_imageId[i])
+        b_list_image.add(bImg)
     }
-    recyclerviewimage.adapter= image_adapter(b_list_image)
+    recyclerviewimage.adapter= Image_adapter(b_list_image)
 }
 
 
