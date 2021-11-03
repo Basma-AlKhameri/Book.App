@@ -10,22 +10,23 @@ import com.example.bookapp.R
 import com.google.android.material.imageview.ShapeableImageView
 
 class image_adapter(val imgList: ArrayList<book_image>) :
-    RecyclerView.Adapter<image_adapter.myAdapter>() {
+    RecyclerView.Adapter<image_adapter.myViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): image_adapter.myAdapter {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): myViewHolder {
         val itemView=
             LayoutInflater.from(parent.context).inflate(R.layout.image_item, parent,false)
-        return image_adapter.myAdapter(itemView)
+        return myViewHolder(itemView)
     }
-    override fun onBindViewHolder(holder: image_adapter.myAdapter, position: Int) {
+    override fun onBindViewHolder(holder: myViewHolder, position: Int) {
         val curruntItem= imgList[position]
         holder.bookImage.setImageResource(curruntItem.book_image)
     }
 
     override fun getItemCount(): Int {
-        return imgList.size    }
+        return imgList.size
+    }
 
-    class myAdapter(itemView: View) :RecyclerView.ViewHolder(itemView){
+    class myViewHolder(itemView: View) :RecyclerView.ViewHolder(itemView){
         val bookImage: ShapeableImageView =itemView.findViewById(R.id.imageView)
     }
 }

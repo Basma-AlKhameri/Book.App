@@ -40,12 +40,12 @@ class Home_icon_fragment : Fragment(R.layout.home_icon_fragment) {
         super.onViewCreated(view, savedInstanceState)
 
         c_imageId = arrayOf(
-            R.drawable.art_category,
-            R.drawable.biography_category,
-            R.drawable.business_category,
-            R.drawable.history_category,
             R.drawable.science_category,
-            R.drawable.travel_category
+            R.drawable.travel_category,
+            R.drawable.biography_category,
+            R.drawable.history_category,
+            R.drawable.art_category,
+            R.drawable.business_category
         )
 
         recyclerview = view.findViewById(R.id.recyclerview)
@@ -57,11 +57,13 @@ class Home_icon_fragment : Fragment(R.layout.home_icon_fragment) {
         c_list_image = arrayListOf<images>()
         getImages()
 
-    }//اذا بتشيلين الكومنت من الكود احذفي هذا القوس
-
-      /*  // image recyclerview
         b_imageId= arrayOf(
-            R.drawable.test)
+                    R.drawable.science_category,
+            R.drawable.travel_category,
+            R.drawable.biography_category,
+            R.drawable.history_category,
+            R.drawable.art_category,
+            R.drawable.business_category)
 
         b_list_image= arrayListOf<book_image>()
         getBookImages()
@@ -80,7 +82,7 @@ private fun getBookImages() {
         b_list_image.add(bppkimg)
     }
     recyclerviewimage.adapter= image_adapter(b_list_image)
-}*/
+}
 
 
 
