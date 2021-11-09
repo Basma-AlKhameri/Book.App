@@ -7,5 +7,5 @@
         />
     <item
        android:id="@+id/icart"
-        android:icon="@drawable/ic_cart"/>
+        android:icon="@drawable/cart_icon"/>
 </menu>
