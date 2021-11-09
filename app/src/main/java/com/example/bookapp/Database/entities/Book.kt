@@ -13,7 +13,7 @@ data class Book(
     val description: String,
     val image: Image,
     val Category_name: String,
-   val  user_name: String
+   //val  user_name: String
 
 
 )
