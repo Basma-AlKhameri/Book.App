@@ -1,6 +1,5 @@
-package com.example.bookapp.entities
+package com.example.bookapp.Database.entities
 
-import android.provider.ContactsContract
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 

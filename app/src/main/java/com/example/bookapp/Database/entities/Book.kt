@@ -1,4 +1,4 @@
-package com.example.bookapp.entities
+package com.example.bookapp.Database.entities
 
 import android.media.Image
 import androidx.room.Entity
@@ -12,7 +12,8 @@ data class Book(
     val author:String,
     val description: String,
     val image: Image,
-    val userSelectCategory: String
+    val Category_name: String,
+   val  user_name: String
 
 
 )
