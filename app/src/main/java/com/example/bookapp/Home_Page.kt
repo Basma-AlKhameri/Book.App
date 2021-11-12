@@ -27,7 +27,7 @@ class Home_Page : AppCompatActivity() {
             Category("Biography"),
             Category("Travel")
         )
-        val book = listOf(
+       /* val book = listOf(
             Book(1"Lives of Weeds: Opportunism, Resistance, Folly"
             ,10,"John Cardina","  "," ","Science",),
             Book(2,"Plagues Upon the Earth: Disease and the Course of Human History"
@@ -75,7 +75,8 @@ class Home_Page : AppCompatActivity() {
                 ,10,"Kelefa Sanneh","  "," ","Art"),
             Book(25,"There’s A Ghost In This House"
                 ,10,"Oliver Jeffers","  "," ","Art")
-        )
+
+        )*/
 
 
         val bottomNavigationView2 = findViewById<BottomNavigationView>(R.id.bottomNavigationView2)

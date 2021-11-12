@@ -10,9 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BookApp">
-
         <activity
-            android:name=".Home_Page"
+            android:name=".Book_List"
             android:exported="true">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
@@ -21,6 +20,15 @@
         </intent-filter>
         </activity>
 
+        <activity
+            android:name=".Home_Page"
+            android:exported="true">
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true" />

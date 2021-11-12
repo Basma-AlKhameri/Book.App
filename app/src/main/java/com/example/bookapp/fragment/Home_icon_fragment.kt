@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.bookapp.DataClass.book_image
 import com.example.bookapp.DataClass.images
 import com.example.bookapp.R
-import com.example.bookapp.adapters.Category_recyclerview_adapter
+import com.example.bookapp.adapters.Category_image
 import com.example.bookapp.adapters.Image_adapter
 
 
@@ -87,7 +87,7 @@ private fun getBookImages() {
             val ic= images(c_imageId[i])
            c_list_image.add(ic)
         }
-        recyclerview.adapter= Category_recyclerview_adapter(c_list_image)
+        recyclerview.adapter= Category_image(c_list_image)
     }
 
 

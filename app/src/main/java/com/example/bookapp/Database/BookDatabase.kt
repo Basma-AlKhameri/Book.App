@@ -26,6 +26,8 @@ abstract class BookDatabase : RoomDatabase() {
 
         fun getInstance(context: Context): BookDatabase {
             synchronized(this) {
+                // if the INSTANCE is not null, then return it,
+                // if it is, then create the database
                 return INSTANCE ?: Room.databaseBuilder(
                     context.applicationContext, BookDatabase::class.java, "book_db"
                 ).build().also { INSTANCE = it }
