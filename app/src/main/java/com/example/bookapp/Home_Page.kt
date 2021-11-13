@@ -7,10 +7,12 @@ import com.example.bookapp.Database.BookDao
 import com.example.bookapp.Database.BookDatabase
 import com.example.bookapp.Database.entities.Book
 import com.example.bookapp.Database.entities.Category
+import com.example.bookapp.databinding.ActivityMainBinding
 import com.example.bookapp.fragment.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class Home_Page : AppCompatActivity() {
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

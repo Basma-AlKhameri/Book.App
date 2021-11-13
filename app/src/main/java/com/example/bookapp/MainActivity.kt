@@ -5,16 +5,19 @@ import android.os.Bundle
 import android.widget.TableLayout
 import androidx.viewpager.widget.ViewPager
 import com.example.bookapp.adapters.ViewPagerAdapter
+import com.example.bookapp.databinding.ActivityMainBinding
 import com.example.bookapp.fragment.LoginFragment
 import com.example.bookapp.fragment.SignUpFragment
 import com.google.android.material.tabs.TabLayout
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var binding : ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding=ActivityMainBinding.inflate(layoutInflater)
 //splash screen
         setTheme(R.style.Theme_BookApp)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
         setUpTaps()
     }
     private fun setUpTaps(){
