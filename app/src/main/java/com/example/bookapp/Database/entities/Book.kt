@@ -11,7 +11,7 @@ data class Book(
     val price: Int,
     val author:String,
     val description: String,
-    val image: Image,
+   val image: Int,
     val Category_name: String,
    //val  user_name: String
 

@@ -29,7 +29,7 @@ abstract class BookDatabase : RoomDatabase() {
                 // if the INSTANCE is not null, then return it,
                 // if it is, then create the database
                 return INSTANCE ?: Room.databaseBuilder(
-                    context.applicationContext, BookDatabase::class.java, "book_db"
+                    context.applicationContext, BookDatabase::class.java, "book.db"
                 ).build().also { INSTANCE = it }
             }
         }

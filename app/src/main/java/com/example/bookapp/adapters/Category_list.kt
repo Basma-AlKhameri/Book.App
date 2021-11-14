@@ -6,9 +6,12 @@ import android.view.ViewGroup
 import android.widget.TextView
 import com.example.bookapp.DataClass.DataClass_CategoryList
 import androidx.recyclerview.widget.RecyclerView
+import com.example.bookapp.Database.entities.Category
 import com.example.bookapp.R
+import java.util.*
+import kotlin.collections.ArrayList
 
-class Category_list (private val LCategory: ArrayList<DataClass_CategoryList>):
+class Category_list (private val LCategory: List<Category>):
     RecyclerView.Adapter<Category_list.myviewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): myviewHolder {
@@ -19,7 +22,7 @@ class Category_list (private val LCategory: ArrayList<DataClass_CategoryList>):
 
     override fun onBindViewHolder(holder: myviewHolder, position: Int) {
         val curruntItem= LCategory[position]
-        holder.textC.text = curruntItem.category
+        holder.textC.text = curruntItem.Category_name
 
     }
 

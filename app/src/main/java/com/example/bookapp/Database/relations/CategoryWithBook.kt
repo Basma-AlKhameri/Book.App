@@ -8,7 +8,7 @@ import com.example.bookapp.Database.entities.Category
 
 @Entity
 data class CategoryWithBook(
-    @Embedded val category: Category,
+    @Embedded val category: String,
     @Relation(
         parentColumn = "Category_name",
         entityColumn  = "Category_name"
