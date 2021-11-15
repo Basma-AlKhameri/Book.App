@@ -16,7 +16,7 @@ import kotlinx.coroutines.launch
 class Book_List : AppCompatActivity() {
 
     private lateinit var recyclerviewCategory: RecyclerView
-    lateinit var list_category: ArrayList<DataClass_CategoryList>
+    lateinit var list_category: List<DataClass_CategoryList>
      var listid : List<Category> = listOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
