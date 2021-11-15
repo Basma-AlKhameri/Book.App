@@ -1,5 +1,6 @@
 package com.example.bookapp.Database
 
+import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.example.bookapp.Database.entities.Book
 import com.example.bookapp.Database.entities.Category
@@ -13,14 +14,15 @@ interface BookDao {
    suspend fun insertBook(book:Book)*/
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertCategory(category:Category)
+     fun insertCategory(category:Category)
 
-  /*  @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertUser(user:User)*/
+
+    /*  @Insert(onConflict = OnConflictStrategy.REPLACE)
+   suspend fun insertUser(user:User)*/
 
     @Transaction
     @Query("SELECT * FROM Category")
-    suspend fun getCategory():List<Category>
+     fun getCategory():LiveData<List<Category>>
 
 // @Transaction
 // @Query("SELECT * FROM Category")

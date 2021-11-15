@@ -24,7 +24,7 @@ abstract class BookDatabase : RoomDatabase() {
         @Volatile
         private var INSTANCE: BookDatabase? = null
 
-        fun getInstance(context: Context): BookDatabase {
+        fun getDatabase(context: Context): BookDatabase {
             synchronized(this) {
                 // if the INSTANCE is not null, then return it,
                 // if it is, then create the database

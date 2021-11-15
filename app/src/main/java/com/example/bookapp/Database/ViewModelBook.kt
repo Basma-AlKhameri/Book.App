@@ -13,7 +13,8 @@ class ViewModelBook (application: Application):AndroidViewModel(application){
     private val repository : RepositoryBook
     private var readAll: LiveData<List<Category>>
     init {
-        val BookDB = RoomDatabase.getDatabase(application).bookDao()
+
+        val BookDB = BookDatabase.getDatabase(application).bookDao
         repository = RepositoryBook(BookDB)
         readAll = repository.getCategory()
     }

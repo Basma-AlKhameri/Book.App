@@ -2,19 +2,14 @@ package com.example.bookapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.Settings
 import androidx.fragment.app.Fragment
 import com.example.bookapp.Database.BookDao
 import com.example.bookapp.Database.BookDatabase
 import com.example.bookapp.Database.entities.Book
 import com.example.bookapp.Database.entities.Category
-import com.example.bookapp.databinding.ActivityMainBinding
+//import com.example.bookapp.databinding.ActivityMainBinding
 import com.example.bookapp.fragment.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 class Home_Page : AppCompatActivity() {
 
@@ -26,7 +21,6 @@ class Home_Page : AppCompatActivity() {
 //database
       val dao: BookDao = BookDatabase.getInstance(this).bookDao
 
-
         val category = listOf(
             Category("Science"),
             Category("History"),
@@ -36,14 +30,6 @@ class Home_Page : AppCompatActivity() {
             Category("Travel")
         )
 
-GlobalScope.launch{
-
-    withContext(Dispatchers.IO){
-        for (i in category){
-            dao.insertCategory(i)
-        }
-    }
-        }
        /* val book = listOf(
             Book(1"Lives of Weeds: Opportunism, Resistance, Folly"
             ,10,"John Cardina","  "," ","Science",),

@@ -3,6 +3,7 @@ package com.example.bookapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.bookapp.DataClass.DataClass_CategoryList
@@ -17,14 +18,14 @@ class Book_List : AppCompatActivity() {
 
     private lateinit var recyclerviewCategory: RecyclerView
     lateinit var list_category: List<DataClass_CategoryList>
-     var listid : List<Category> = listOf()
+    var listid :LiveData< List<Category>> = listOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_book_list)
 
         // category list
-        val dao: BookDao = BookDatabase.getInstance(this).bookDao
+        val dao: BookDao = BookDatabase.getDatabase(this).bookDao
        /* listid= arrayOf("Science","History","Business","Biography",
         "Travel","Art")*/
 
@@ -36,9 +37,9 @@ class Book_List : AppCompatActivity() {
         list_category= arrayListOf<DataClass_CategoryList>()
 
 
-        GlobalScope.launch{
+
             listid = dao.getCategory()
-        }
+
         Log.d("list", listid.toString())
         recyclerviewCategory.adapter= Category_list(listid)
     }
