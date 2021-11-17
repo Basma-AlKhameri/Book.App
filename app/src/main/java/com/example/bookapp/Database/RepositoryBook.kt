@@ -5,7 +5,7 @@ import com.example.bookapp.Database.entities.Category
 
 class RepositoryBook(private val bookDao: BookDao) {
 
-     fun insertCategory(category: Category)=
+    suspend fun insertCategory(category: Category)=
         bookDao.insertCategory(category)
 
      fun getCategory():LiveData<List<Category>> = bookDao.getCategory()

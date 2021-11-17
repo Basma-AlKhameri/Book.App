@@ -10,15 +10,16 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class ViewModelBook (application: Application):AndroidViewModel(application){
+
     private val repository : RepositoryBook
-    private var readAll: LiveData<List<Category>>
+     var readAll: LiveData<List<Category>>
     init {
 
-        val BookDB = BookDatabase.getDatabase(application).bookDao
+        val BookDB = BookDatabase.getDatabase(application).bookDao()
         repository = RepositoryBook(BookDB)
         readAll = repository.getCategory()
     }
-    fun addBook(category: Category){
+    fun insertCategory(category: Category){
         viewModelScope.launch(Dispatchers.IO) {
             repository.insertCategory(category)
         }

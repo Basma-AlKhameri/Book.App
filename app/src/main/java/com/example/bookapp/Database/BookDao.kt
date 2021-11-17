@@ -14,7 +14,7 @@ interface BookDao {
    suspend fun insertBook(book:Book)*/
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-     fun insertCategory(category:Category)
+    suspend fun insertCategory(category:Category)
 
 
     /*  @Insert(onConflict = OnConflictStrategy.REPLACE)

@@ -17,8 +17,8 @@ import com.example.bookapp.Database.entities.User
     ],
     version = 1
 )
-abstract class BookDatabase : RoomDatabase() {
-    abstract val bookDao: BookDao
+abstract class BookDatabase: RoomDatabase() {
+    abstract fun bookDao(): BookDao
 
     companion object {
         @Volatile

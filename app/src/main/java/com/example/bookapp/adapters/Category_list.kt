@@ -11,9 +11,9 @@ import com.example.bookapp.R
 import java.util.*
 import kotlin.collections.ArrayList
 
-class Category_list (private val LCategory: List<Category>):
-    RecyclerView.Adapter<Category_list.myviewHolder>() {
+class Category_list (): RecyclerView.Adapter<Category_list.myviewHolder>() {
 
+     var LCategory = emptyList<Category>()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): myviewHolder {
         val itemView=
             LayoutInflater.from(parent.context).inflate(R.layout.category_item, parent,false)
@@ -32,5 +32,9 @@ class Category_list (private val LCategory: List<Category>):
 
     class myviewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         val textC: TextView =itemView.findViewById(R.id.list_category)
+    }
+    fun setData(category: List<Category>){
+        this.LCategory = category
+        notifyDataSetChanged()
     }
 }
