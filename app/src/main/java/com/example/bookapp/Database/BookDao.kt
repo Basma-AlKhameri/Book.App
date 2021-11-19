@@ -1,6 +1,7 @@
 package com.example.bookapp.Database
 
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.room.*
 import com.example.bookapp.Database.entities.Book
 import com.example.bookapp.Database.entities.Category
@@ -21,8 +22,8 @@ interface BookDao {
    suspend fun insertUser(user:User)*/
 
     @Transaction
-    @Query("SELECT * FROM Category")
-     fun getCategory():LiveData<List<Category>>
+    @Query("SELECT * FROM cat_table")
+     fun getCategory(): LiveData<List<Category>>
 
 // @Transaction
 // @Query("SELECT * FROM Category")

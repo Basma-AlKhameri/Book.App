@@ -19,7 +19,7 @@ class Home_Page : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_page)
 //database
-      val dao: BookDao = BookDatabase.getDatabase(this).bookDao
+      val dao: BookDao = BookDatabase.getDatabase(this).bookDao()
 
         val category = listOf(
             Category("Science"),

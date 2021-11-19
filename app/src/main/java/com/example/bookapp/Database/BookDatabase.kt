@@ -7,6 +7,7 @@ import androidx.room.RoomDatabase
 import com.example.bookapp.Database.entities.Book
 import com.example.bookapp.Database.entities.Category
 import com.example.bookapp.Database.entities.User
+import com.example.bookapp.Home_Page
 
 
 @Database(
@@ -17,7 +18,7 @@ import com.example.bookapp.Database.entities.User
     ],
     version = 1
 )
-abstract class BookDatabase: RoomDatabase() {
+abstract class BookDatabase : RoomDatabase() {
     abstract fun bookDao(): BookDao
 
     companion object {
@@ -25,13 +26,20 @@ abstract class BookDatabase: RoomDatabase() {
         private var INSTANCE: BookDatabase? = null
 
         fun getDatabase(context: Context): BookDatabase {
+            val tempInstance = INSTANCE
+            if (tempInstance != null) {
+                return tempInstance
+            }
             synchronized(this) {
-                // if the INSTANCE is not null, then return it,
-                // if it is, then create the database
-                return INSTANCE ?: Room.databaseBuilder(
-                    context.applicationContext, BookDatabase::class.java, "book.db"
-                ).build().also { INSTANCE = it }
+                val instance =
+                    Room.databaseBuilder(
+                        context.applicationContext, BookDatabase::class.java, "book.db"
+                    ).build()
+                    INSTANCE =instance
+                return instance
             }
         }
+
+
     }
 }
