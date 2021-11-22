@@ -14,7 +14,6 @@ import java.util.*
 import kotlin.collections.ArrayList
 
 class Category_list(private val LCategory: LiveData<List<Category>>) :
-
     RecyclerView.Adapter<Category_list.myviewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): myviewHolder {
@@ -25,9 +24,7 @@ class Category_list(private val LCategory: LiveData<List<Category>>) :
 
     override fun onBindViewHolder(holder: myviewHolder, position: Int) {
         val list = LCategory.value
-
         val curruntItem = list?.get(position)?.Category_name
-
         holder.textC.text = curruntItem
 
     }
