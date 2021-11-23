@@ -1,25 +1,40 @@
 package com.example.bookapp
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.method.ScrollingMovementMethod
+import android.widget.TextView
+import androidx.activity.viewModels
 import androidx.fragment.app.Fragment
 import com.example.bookapp.Database.BookDao
 import com.example.bookapp.Database.BookDatabase
+import com.example.bookapp.Database.ViewModelBook
 import com.example.bookapp.Database.entities.Book
 import com.example.bookapp.Database.entities.Category
 //import com.example.bookapp.databinding.ActivityMainBinding
 import com.example.bookapp.fragment.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.mlkit.vision.text.Text
+import kotlinx.android.synthetic.main.activity_book_list.*
+import java.util.*
 
 class Home_Page : AppCompatActivity() {
 
-
+    lateinit var descriptionView:TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_page)
+        //scrolling view
+        val descriptionView = findViewById<TextView>(R.id.Description)
+        val text :String ="@string/test"
+        descriptionView.text=text
+        descriptionView.movementMethod = ScrollingMovementMethod()
 //database
       val dao: BookDao = BookDatabase.getDatabase(this).bookDao()
+
+
 
         val category = listOf(
             Category("Science"),
@@ -111,10 +126,16 @@ class Home_Page : AppCompatActivity() {
             true
         }
     }
+    // Observe the LiveData, passing in this activity as the LifecycleOwner and the observer.
+
+   
 
     private fun setCurrentFragment(fragment: Fragment) =
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.flFragment, fragment)
             commit()
         }
+
+
+
 }
