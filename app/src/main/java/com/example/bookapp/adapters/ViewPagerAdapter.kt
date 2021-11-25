@@ -7,6 +7,7 @@ import java.util.ArrayList
 
 class ViewPagerAdapter(supportFragmentManger:FragmentManager):FragmentPagerAdapter(supportFragmentManger,
     BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
+
     private val mFragmentList= ArrayList<Fragment>()
     private val mFragmentTitleList = ArrayList<String>()
 

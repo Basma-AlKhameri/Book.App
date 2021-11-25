@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         setUpTaps()
     }
+
     private fun setUpTaps(){
         val adapter = ViewPagerAdapter(supportFragmentManager)
         val viewPager:ViewPager=findViewById(R.id.viewPager)
