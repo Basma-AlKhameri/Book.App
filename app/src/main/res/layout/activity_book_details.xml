@@ -85,21 +85,26 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/book_name" />
 
-            <TextView
+            <com.borjabravo.readmoretextview.ReadMoreTextView
                 android:id="@+id/Description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="20dp"
                 android:paddingStart="30dp"
                 android:paddingEnd="10dp"
                 android:text="@string/test"
                 android:textColor="@color/navy_blue"
                 android:textSize="15sp"
+                app:trimExpandedText="Read More.."
+                app:trimCollapsedText="Read Less"
+                app:trimLength="1000"
+                app:colorClickableText="#43A6F5"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/book_author" />
+
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -107,18 +112,16 @@
 
     <Button
         android:id="@+id/Button_buy"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
         android:background="@drawable/button_bg"
         android:text="Buy"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/scrollView2" />
+        app:layout_constraintStart_toStartOf="parent" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
