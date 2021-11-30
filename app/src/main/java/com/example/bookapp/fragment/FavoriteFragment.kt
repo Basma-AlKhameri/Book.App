@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.example.bookapp.R
 
 
-class Profile_icon_fragment : Fragment() {
+class FavoriteFragment : Fragment(R.layout.favorite_fragment) {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,8 +22,9 @@ class Profile_icon_fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.profile_icon_fragment, container, false)
+        return inflater.inflate(R.layout.favorite_fragment, container, false)
     }
 
-}
 
+
+}

@@ -11,11 +11,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.bookapp.DataClass.book_image
 import com.example.bookapp.DataClass.images
 import com.example.bookapp.R
-import com.example.bookapp.adapters.Category_image
-import com.example.bookapp.adapters.Image_adapter
+import com.example.bookapp.adapters.CategoryImageAdapter
+import com.example.bookapp.adapters.ImageAdapter
 
 
-class Home_icon_fragment : Fragment(R.layout.home_icon_fragment) {
+class HomeFragment : Fragment(R.layout.home_fragment) {
 
     //category recyclerview
     private lateinit var recyclerview: RecyclerView
@@ -33,7 +33,7 @@ class Home_icon_fragment : Fragment(R.layout.home_icon_fragment) {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.home_icon_fragment, container, false)
+        return inflater.inflate(R.layout.home_fragment, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -77,7 +77,7 @@ private fun getBookImages() {
         val bImg= book_image(b_imageId[i])
         b_list_image.add(bImg)
     }
-    recyclerviewimage.adapter= Image_adapter(b_list_image)
+    recyclerviewimage.adapter= ImageAdapter(b_list_image)
 }
 
 
@@ -87,7 +87,7 @@ private fun getBookImages() {
             val ic= images(c_imageId[i])
            c_list_image.add(ic)
         }
-        recyclerview.adapter= Category_image(c_list_image)
+        recyclerview.adapter= CategoryImageAdapter(c_list_image)
     }
 
 

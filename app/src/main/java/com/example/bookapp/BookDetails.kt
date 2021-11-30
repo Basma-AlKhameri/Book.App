@@ -6,7 +6,7 @@ import android.text.method.ScrollingMovementMethod
 import android.widget.Button
 import android.widget.TextView
 
-class Book_Details : AppCompatActivity() {
+class BookDetails : AppCompatActivity() {
 lateinit var fav_button:Button
 
     override fun onCreate(savedInstanceState: Bundle?) {

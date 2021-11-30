@@ -3,20 +3,18 @@ package com.example.bookapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.bookapp.DataClass.DataClass_CategoryList
+import com.example.bookapp.DataClass.DataClassCategoryList
 import com.example.bookapp.Database.BookDao
 import com.example.bookapp.Database.BookDatabase
-import com.example.bookapp.Database.entities.Category
-import com.example.bookapp.adapters.Category_list
+import com.example.bookapp.adapters.CategoryListAdapter
 
 
-class Book_List : AppCompatActivity() {
+class BookList : AppCompatActivity() {
 
     private lateinit var recyclerviewCategory: RecyclerView
-    lateinit var list_category: List<DataClass_CategoryList>
+    lateinit var list_category: List<DataClassCategoryList>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,12 +32,12 @@ class Book_List : AppCompatActivity() {
         recyclerviewCategory.setHasFixedSize(true)
 
 
-        list_category = arrayListOf<DataClass_CategoryList>()
+        list_category = arrayListOf<DataClassCategoryList>()
 
         var listid = dao.getCategory()
         Log.d("listBASMA", listid.toString())
 
-        recyclerviewCategory.adapter = Category_list(listid)
+        recyclerviewCategory.adapter = CategoryListAdapter(listid)
     }
 
     /* private fun getlist() {

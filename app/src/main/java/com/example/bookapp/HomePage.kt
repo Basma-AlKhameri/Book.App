@@ -1,24 +1,16 @@
 package com.example.bookapp
 
-import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.method.ScrollingMovementMethod
-import android.widget.TextView
-import androidx.activity.viewModels
 import androidx.fragment.app.Fragment
 import com.example.bookapp.Database.BookDao
 import com.example.bookapp.Database.BookDatabase
-import com.example.bookapp.Database.ViewModelBook
-import com.example.bookapp.Database.entities.Book
 import com.example.bookapp.Database.entities.Category
 //import com.example.bookapp.databinding.ActivityMainBinding
 import com.example.bookapp.fragment.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import kotlinx.android.synthetic.main.activity_book_list.*
-import java.util.*
 
-class Home_Page : AppCompatActivity() {
+class HomePage : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -94,11 +86,11 @@ class Home_Page : AppCompatActivity() {
         val bottomNavigationView2 = findViewById<BottomNavigationView>(R.id.bottomNavigationView2)
         val bottomNavigationView1 = findViewById<BottomNavigationView>(R.id.bottomNavigationView1)
 
-        val homeFragment = Home_icon_fragment()
-        val favotiteFragment = Favorite_icon_fragment()
-        val profileFragment = Profile_icon_fragment()
-        val searchFragment = Search_icon_fragment()
-        val cartFragment = Cart_icon_fragment()
+        val homeFragment = HomeFragment()
+        val favotiteFragment = FavoriteFragment()
+        val profileFragment = ProfileFragment()
+        val searchFragment = SearchFragment()
+        val cartFragment = CartFragment()
 
         setCurrentFragment(homeFragment)
 

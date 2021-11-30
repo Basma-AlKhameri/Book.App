@@ -8,8 +8,8 @@ import com.example.bookapp.DataClass.images
 import com.example.bookapp.R
 import com.google.android.material.imageview.ShapeableImageView
 
-class Category_image(val limage: ArrayList<images>):
-    RecyclerView.Adapter<Category_image.myViewHolder> (){
+class CategoryImageAdapter(val limage: ArrayList<images>):
+    RecyclerView.Adapter<CategoryImageAdapter.myViewHolder> (){
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): myViewHolder {
             val itemView=

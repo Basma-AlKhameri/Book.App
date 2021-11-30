@@ -5,16 +5,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import com.example.bookapp.DataClass.DataClass_CategoryList
 import androidx.recyclerview.widget.RecyclerView
 import com.example.bookapp.Database.entities.Category
 import com.example.bookapp.R
-import java.util.*
-import kotlin.collections.ArrayList
 
-class Category_list(private val LCategory: LiveData<List<Category>>) :
-    RecyclerView.Adapter<Category_list.myviewHolder>() {
+class CategoryListAdapter(private val LCategory: LiveData<List<Category>>) :
+    RecyclerView.Adapter<CategoryListAdapter.myviewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): myviewHolder {
         val itemView =

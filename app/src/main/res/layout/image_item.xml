@@ -8,6 +8,8 @@
         android:id="@+id/imageView"
         android:layout_width="170dp"
         android:layout_height="170dp"
+        android:background="@drawable/babook_lyallow"
         android:src="@drawable/test" />
+
 
 </RelativeLayout>

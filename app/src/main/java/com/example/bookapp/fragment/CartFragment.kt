@@ -7,24 +7,20 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.bookapp.R
 
-
-class Favorite_icon_fragment : Fragment(R.layout.favorite_icon_fragment) {
-
+class CartFragment : Fragment(R.layout.cart_fragment) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        }
-
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.favorite_icon_fragment, container, false)
+        return inflater.inflate(R.layout.cart_fragment, container, false)
     }
 
 
-
-}
+    }

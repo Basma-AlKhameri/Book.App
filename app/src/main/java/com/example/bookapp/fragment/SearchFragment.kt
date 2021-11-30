@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.example.bookapp.R
 
 
-class Search_icon_fragment : Fragment() {
+class SearchFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,7 +20,7 @@ class Search_icon_fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.search_icon_fragment, container, false)
+        return inflater.inflate(R.layout.search_fragment, container, false)
     }
 
 
