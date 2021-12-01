@@ -8,11 +8,16 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
 import com.example.bookapp.R
+import com.example.bookapp.databinding.CartFragmentBinding
 import com.shuhart.stepview.StepView
 import kotlinx.android.synthetic.*
 
 
 class CartFragment : Fragment(R.layout.cart_fragment) {
+    private var _binding: CartFragmentBinding? = null
+    // with the backing property of the kotlin we extract
+    // the non null value of the _binding
+    private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,8 +25,8 @@ class CartFragment : Fragment(R.layout.cart_fragment) {
     }
 fun stepupStepupView(){
 
-    val stepView=View.FindViewById(R.id.step_view_cart)
-    stepView.State
+    //val stepView=view.findViewById(R.id.step_view_cart)
+    binding.stepViewCart.state
          // You should specify only stepsNumber or steps array of strings.
         // In case you specify both steps array is chosen.
         .steps(object : ArrayList<String?>() {
@@ -39,8 +44,9 @@ fun stepupStepupView(){
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.cart_fragment, container, false)
+        _binding = CartFragmentBinding.inflate(inflater, container, false)
+        val view = binding.root
+        return view
     }
 
 
