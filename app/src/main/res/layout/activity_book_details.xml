@@ -3,13 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@drawable/k1">
 
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -33,13 +34,13 @@
                 android:id="@+id/icon"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:background="@drawable/fav_button_background"
                 app:layout_constraintBottom_toBottomOf="@+id/book_image"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.885"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/book_image"
-                app:layout_constraintVertical_bias="0.841" />
+                app:layout_constraintVertical_bias="0.841"
+                android:background="@drawable/fav_button_background" />
 
 
             <TextView
@@ -91,20 +92,21 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="20dp"
-                android:layout_marginBottom="0dp"
                 android:paddingStart="30dp"
                 android:paddingEnd="10dp"
                 android:text="@string/test"
                 android:textColor="@color/navy_blue"
                 android:textSize="15sp"
+                app:trimExpandedText="Read More.."
+                app:trimCollapsedText="Read Less"
+                app:trimLength="1000"
                 app:colorClickableText="#43A6F5"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/book_author"
-                app:trimCollapsedText="Read Less"
-                app:trimExpandedText="Read More.."
-                app:trimLength="1000"
-                tools:ignore="MissingClass" />
+                app:layout_constraintTop_toBottomOf="@+id/book_author" />
+
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
@@ -112,15 +114,13 @@
         android:id="@+id/Button_buy"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="90dp"
         android:background="@drawable/button_bg"
         android:text="Buy"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 

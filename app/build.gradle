@@ -61,7 +61,8 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     //read more
     implementation'com.borjabravo:readmoretextview:2.1.0'
-
+// StepView
+    implementation 'com.shuhart.stepview:stepview:1.5.1'
 
     def room_version = "2.3.0"
 
