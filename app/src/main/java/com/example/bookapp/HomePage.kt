@@ -1,10 +1,15 @@
 package com.example.bookapp
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.AttributeSet
+import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import com.example.bookapp.Database.BookDao
 import com.example.bookapp.Database.BookDatabase
+import com.example.bookapp.Database.ViewModelBook
 import com.example.bookapp.Database.entities.Category
 //import com.example.bookapp.databinding.ActivityMainBinding
 import com.example.bookapp.fragment.*
@@ -12,24 +17,30 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomePage : AppCompatActivity() {
 
+lateinit var viewModel:ViewModelBook
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_page)
 
-//database
-      val dao: BookDao = BookDatabase.getDatabase(this).bookDao()
+        viewModel=ViewModelProvider(this).get(ViewModelBook::class.java)
 
-
-
-        val category = listOf(
+        val category1 = listOf(
             Category("Science"),
             Category("History"),
             Category("Art"),
             Category("Business"),
             Category("Biography"),
-            Category("Travel")
-        )
+            Category("Travel") )
+
+            for(i in category1){
+viewModel.insertCategory(i)
+        }
+
+//database
+     // val dao: BookDao = BookDatabase.getDatabase(this).bookDao()
+
+
 
        /* val book = listOf(
             Book(1"Lives of Weeds: Opportunism, Resistance, Folly"
@@ -114,14 +125,17 @@ class HomePage : AppCompatActivity() {
     }
     // Observe the LiveData, passing in this activity as the LifecycleOwner and the observer.
 
-   
 
     private fun setCurrentFragment(fragment: Fragment) =
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.flFragment, fragment)
             commit()
-        }
+         }
+    }
 
 
 
-}
+
+
+
+

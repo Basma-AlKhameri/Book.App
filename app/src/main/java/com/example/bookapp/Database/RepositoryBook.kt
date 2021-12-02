@@ -9,7 +9,11 @@ class RepositoryBook(private val bookDao: BookDao) {
     suspend fun insertCategory(category: Category)=
         bookDao.insertCategory(category)
 
-     fun getCategory(): LiveData<List<Category>> = bookDao.getCategory()
+     fun getCategory(Category_name:String): LiveData<List<Category>> {
+         return bookDao.getCategory(Category_name)
 
-
+     }
 }
+
+
+
