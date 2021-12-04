@@ -1,5 +1,6 @@
 package com.example.bookapp
 
+import android.app.Activity
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -101,14 +102,13 @@ viewModel.insertCategory(i)
         val favotiteFragment = FavoriteFragment()
         val profileFragment = ProfileFragment()
         val searchFragment = SearchFragment()
-        val cartFragment = CartFragment()
+        //val cartActivity = Cart()
 
         setCurrentFragment(homeFragment)
-
         bottomNavigationView1.setOnNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.isearch -> setCurrentFragment(searchFragment)
-                R.id.icart -> setCurrentFragment(cartFragment)
+                //R.id.icart -> setCurrentFragment(cartActivity)
             }
             true
         }
@@ -131,6 +131,7 @@ viewModel.insertCategory(i)
             replace(R.id.flFragment, fragment)
             commit()
          }
+
     }
 
 
