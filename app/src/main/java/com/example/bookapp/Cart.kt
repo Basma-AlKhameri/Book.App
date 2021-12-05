@@ -18,6 +18,7 @@ class Cart : AppCompatActivity() {
         stepupStepupView()
         setupViewPager()
         setupButtons()
+
     }
     lateinit var stepView: StepView
         fun stepupStepupView(){
@@ -35,6 +36,9 @@ class Cart : AppCompatActivity() {
                 .stepsNumber(3)
                 .animationDuration(resources.getInteger(android.R.integer.config_shortAnimTime))
                 .commit()
+            stepView.setOnStepClickListener { position->
+                viewPager.setCurrentItem(position,false)
+            }
         }
 
 
@@ -45,6 +49,7 @@ class Cart : AppCompatActivity() {
                 override fun onPageSelected(position: Int) {
                     super.onPageSelected(position)
                     setButtons(position)
+                    stepView.go(position,true)
                 }
             }
         ){
