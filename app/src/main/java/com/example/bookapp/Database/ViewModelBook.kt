@@ -6,6 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import androidx.room.RoomDatabase
+import com.example.bookapp.Database.entities.Book
 import com.example.bookapp.Database.entities.Category
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -25,6 +26,13 @@ class ViewModelBook (application: Application):AndroidViewModel(application){
             repository.insertCategory(category)
         }
     }
-            fun getAllCategoy(Category_name:String):LiveData<List<Category>>{
+//today
+       fun insertBook(book: Book){
+               viewModelScope.launch(Dispatchers.IO) {
+                       repository.insertBook(book)
+                 }
+       }
+
+    fun getAllCategoy(Category_name:String):LiveData<List<Category>>{
                 return repository.getCategory(Category_name)}
 }

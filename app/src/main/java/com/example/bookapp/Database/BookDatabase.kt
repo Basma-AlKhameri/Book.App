@@ -15,7 +15,7 @@ import com.example.bookapp.Database.entities.User
         Category::class,
         User::class,
     ],
-    version = 1
+    version = 2
 )
 abstract class BookDatabase : RoomDatabase() {
     abstract fun bookDao(): BookDao
@@ -33,7 +33,7 @@ abstract class BookDatabase : RoomDatabase() {
                 val instance =
                     Room.databaseBuilder(
                         context.applicationContext, BookDatabase::class.java, "book.db"
-                    ).build()
+                    ).fallbackToDestructiveMigration().build()// today
                     INSTANCE =instance
                 return instance
             }

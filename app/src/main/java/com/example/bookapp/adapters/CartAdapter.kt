@@ -8,7 +8,7 @@ import com.example.bookapp.fragment.CartFirstFragment
 import com.example.bookapp.fragment.CartSecondFragment
 import com.example.bookapp.fragment.CartThirdFragment
 
-class CartAdapter(fragmentManager: FragmentManager,lifecycle: Lifecycle): FragmentStatePagerAdapter(fragmentManager, lifecycle) {
+class CartAdapter(fragmentManager: FragmentManager): FragmentStatePagerAdapter(fragmentManager) {
     override fun getCount(): Int {
         return 3
     }

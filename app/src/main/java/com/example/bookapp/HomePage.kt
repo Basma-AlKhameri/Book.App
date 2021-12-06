@@ -2,6 +2,7 @@ package com.example.bookapp
 
 import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.AttributeSet
@@ -11,6 +12,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.bookapp.Database.BookDao
 import com.example.bookapp.Database.BookDatabase
 import com.example.bookapp.Database.ViewModelBook
+import com.example.bookapp.Database.entities.Book
 import com.example.bookapp.Database.entities.Category
 //import com.example.bookapp.databinding.ActivityMainBinding
 import com.example.bookapp.fragment.*
@@ -18,11 +20,13 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomePage : AppCompatActivity() {
 
-lateinit var viewModel:ViewModelBook
+     lateinit var viewModel:ViewModelBook
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_page)
+
+        val intent=Intent(this, Cart::class.java)
 
         viewModel=ViewModelProvider(this).get(ViewModelBook::class.java)
 
@@ -35,16 +39,14 @@ lateinit var viewModel:ViewModelBook
             Category("Travel") )
 
             for(i in category1){
-viewModel.insertCategory(i)
+                viewModel.insertCategory(i)
         }
 
 //database
      // val dao: BookDao = BookDatabase.getDatabase(this).bookDao()
 
-
-
-       /* val book = listOf(
-            Book(1"Lives of Weeds: Opportunism, Resistance, Folly"
+        val book = listOf(
+            Book(1,"Lives of Weeds: Opportunism, Resistance, Folly"
             ,10,"John Cardina","  "," ","Science",),
             Book(2,"Plagues Upon the Earth: Disease and the Course of Human History"
                 ,10,"Kyle Harper","  "," ","Science"),
@@ -92,7 +94,10 @@ viewModel.insertCategory(i)
             Book(25,"There’s A Ghost In This House"
                 ,10,"Oliver Jeffers","  "," ","Art")
 
-        )*/
+        )
+        for(i in book) {
+                     viewModel.insertBook(i)
+        }
 
 
         val bottomNavigationView2 = findViewById<BottomNavigationView>(R.id.bottomNavigationView2)
@@ -102,13 +107,12 @@ viewModel.insertCategory(i)
         val favotiteFragment = FavoriteFragment()
         val profileFragment = ProfileFragment()
         val searchFragment = SearchFragment()
-        //val cartActivity = Cart()
 
         setCurrentFragment(homeFragment)
         bottomNavigationView1.setOnNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.isearch -> setCurrentFragment(searchFragment)
-                //R.id.icart -> setCurrentFragment(cartActivity)
+                R.id.icart -> startActivity(intent)
             }
             true
         }
@@ -123,7 +127,6 @@ viewModel.insertCategory(i)
             true
         }
     }
-    // Observe the LiveData, passing in this activity as the LifecycleOwner and the observer.
 
 
     private fun setCurrentFragment(fragment: Fragment) =
@@ -133,10 +136,3 @@ viewModel.insertCategory(i)
          }
 
     }
-
-
-
-
-
-
-

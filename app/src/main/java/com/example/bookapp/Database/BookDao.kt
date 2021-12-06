@@ -11,19 +11,18 @@ import com.example.bookapp.Database.relations.CategoryWithBook
 @Dao
 interface BookDao {
 
-//    @Insert(onConflict = OnConflictStrategy.REPLACE)
-//    suspend fun insertBook(book: Book)
-//
+   @Insert(onConflict = OnConflictStrategy.REPLACE)
+ suspend fun insertBook(book: Book)
+
    @Insert(onConflict = OnConflictStrategy.REPLACE)
    suspend fun insertCategory(category: Category)
-//
-//
+
 //    @Insert(onConflict = OnConflictStrategy.REPLACE)
 //    suspend fun insertUser(user: User)
 //
     @Transaction
     @Query("SELECT * FROM cat_table WHERE Category_name =(:Category_name)")
- fun getCategory(Category_name:String): LiveData<List<Category>>
+       fun getCategory(Category_name:String): LiveData<List<Category>>
 
 //
 //    @Transaction
